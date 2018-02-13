@@ -12,6 +12,86 @@ header {
 
 
 
+/* Speedometer 
+
+Bron: https://codepen.io/asnoba/pen/bjokL?editors=1100 */
+
+
+
+
+
+.speedometer, p {
+  margin-left: 75px;
+}
+.speedometer, h3 {
+  margin-left: 64px;
+}
+.speedometer {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 200px;
+  position: relative;
+  border-radius: 200px 200px 0 0;
+  margin: 20px;
+}
+.speedometer:after {
+  background-color: #fff;
+  width: 20px;
+  height: 10px;
+  left: 50%;
+  margin-left: -10px;
+  border-radius: 20px 20px 0 0;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+.speedometer > .pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  bottom: 2px;
+  animation: speed-1 0.5s alternate infinite ease-in-out;
+}
+.speedometer > .pointer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 90px 0 0 3px;
+  border-color: #fff transparent transparent;
+  width: 0;
+  height: 0;
+}
+.speedometer.speed-1 {
+  background-color: #3d9970;
+}
+.speedometer.speed-1 > .pointer {
+  animation-name: speed-1;
+}
+
+@keyframes speed-1 {
+  from {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  to {
+    -moz-transform: rotate(190deg);
+    -ms-transform: rotate(190deg);
+    -webkit-transform: rotate(190deg);
+    transform: rotate(190deg);
+  }
+} 
+
+
+
+
 
 /* food and water storage chart
 
@@ -63,7 +143,7 @@ dt {
   left: 0;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: flex-end;       
 }
 
 .percentage {
