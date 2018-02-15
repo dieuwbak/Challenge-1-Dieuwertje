@@ -1,0 +1,43 @@
+header {
+	background-color: blue;
+	grid-area: header;
+	height: 200px;
+	margin: 10px;
+}
+#Engine {
+	background-color: red;
+	grid-area: engine;
+	height: 200px;
+	margin: 10px;
+}
+#Speed {
+	background-color: yellow;
+	grid-area: speed;
+	height: 200px;
+	margin: 10px;
+}
+#Food {
+	background-color: green;
+	grid-area: food;
+	height: 200px;
+	margin: 10px;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px){
+	body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"header header"
+			"engine speed"
+			"food food";
+	}
+
+@media only screen and (min-width: 1001px) and (max-width: 1200px){
+	body {
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr;
+		grid-template-areas:
+			"header header header"
+			"engine speed food";
+	}

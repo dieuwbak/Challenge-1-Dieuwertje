@@ -138,7 +138,7 @@ Bron: https://codepen.io/asnoba/pen/bjokL?editors=1100 */
   width: 200px;
   position: relative;
   border-radius: 200px 200px 0 0;
-  margin: 20px;
+  margin: 20px auto;
 }
 .speedometer:after {
   background-color: #fff;
@@ -684,3 +684,50 @@ html, body {
   font-family: "fira-sans-2",sans-serif;
   color: #333;
 }
+
+
+
+
+/* media query  */
+
+
+
+
+header {
+  grid-area: header;
+  margin: 10px;
+}
+#Engine {
+  grid-area: engine;
+  margin: 10px;
+}
+#Speed {
+  grid-area: speed;
+  margin: 10px;
+}
+#Food {
+  grid-area: food;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+  body {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "engine speed"
+      "food food";
+  }
+
+
+@media only screen and (min-width: 1001px) {
+  body {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header header"
+      "engine speed food food";
+  }  
