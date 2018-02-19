@@ -6,7 +6,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #3d9970;
+  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
   color: white;
   padding:  10px;
 
@@ -103,7 +103,7 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
 
 .good {
   animation-name: good;
-  background: #3d9970;
+  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
 }
 
 @keyframes good {
@@ -112,8 +112,8 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
   }
   to {
     height: 148px;
-    background-color: #3d9970;
-    background: #3d9970;
+    background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
+    background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
   }
 }
 
@@ -177,7 +177,7 @@ Bron: https://codepen.io/asnoba/pen/bjokL?editors=1100 */
   height: 0;
 }
 .speedometer.speed-1 {
-  background-color: #3d9970;
+  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
 }
 .speedometer.speed-1 > .pointer {
   animation-name: speed-1;
@@ -301,7 +301,7 @@ ul {
 .chart__bar {
   height: 30px;
   margin-bottom: 10px;
-  background: #3d9970;
+  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   opacity: 0;
@@ -336,7 +336,7 @@ ul {
 }
 
 .chart__bar:hover {
-  background: #756D65;
+  background: black;
 }
 
 @keyframes anim-lightspeed-in {
