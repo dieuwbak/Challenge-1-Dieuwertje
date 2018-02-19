@@ -31,9 +31,10 @@ header {
 			"header header"
 			"engine speed"
 			"food food";
-	}
+	}	
+}
 
-@media only screen and (min-width: 1001px) and (max-width: 1200px){
+@media only screen and (max-width: 1200px) and (min-width: 1001px){
 	body {
 		display: grid;
 		grid-template-columns: 1fr 1fr 2fr;
@@ -41,3 +42,4 @@ header {
 			"header header header"
 			"engine speed food";
 	}
+}	
