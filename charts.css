@@ -12,8 +12,9 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
-  color: white;
+  border-bottom-style: solid;
+  border-color: #BBB7B0;
+  color: #9E9B95;
   padding:  10px;
 }
 
@@ -112,7 +113,7 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
 
 .good {
   animation-name: good;
-  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
+  background: #F54F29;
 }
 
 @keyframes good {
@@ -121,8 +122,8 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
   }
   to {
     height: 148px;
-    background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
-    background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
+    background: #F54F29;
+    background: #F54F29;
   }
 }
 
@@ -186,7 +187,7 @@ Bron: https://codepen.io/asnoba/pen/bjokL?editors=1100 */
   height: 0;
 }
 .speedometer.speed-1 {
-  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
+  background: #F54F29;
 }
 .speedometer.speed-1 > .pointer {
   animation-name: speed-1;
