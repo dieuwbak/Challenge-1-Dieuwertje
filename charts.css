@@ -10,18 +10,24 @@ body  {
 
 header {
   z-index: 10;
+  height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-style: solid;
-  border-color: rgb(128, 128, 128);
+  border-radius: 10px;
   background-color: rgba(128, 128, 128, 0.3);
   color: rgb(128, 128, 128);
   padding:  10px;
 }
 
 header h1 {
-  padding-left: 30px;
+  margin: auto;
+}
+
+#Engine,
+#Speed, {
+  display: flex;
+  align-items: center;
 }
 
 
@@ -40,6 +46,12 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
   width: 20px;
   height: 200px;
   z-index: 10;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.thermometer h3 {
+  color: #808080;
+  margin-top: -40px;
 }
 
 #glass {
@@ -62,6 +74,7 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
 #markings {
   padding: 0;
   margin: 0;
+  z-index: 20;
   list-style-type: none;
   position: absolute;
   top: -30px;
@@ -116,7 +129,7 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
 
 .good {
   animation-name: good;
-  background: #F54F29;
+  background: #453DDA;
 }
 
 @keyframes good {
@@ -125,11 +138,10 @@ Bron: https://codepen.io/nedf23/pen/xLmaG?page=1& */
   }
   to {
     height: 148px;
-    background: #F54F29;
-    background: #F54F29;
+    background: #453DDA;
+    background: #453DDA;
   }
 }
-
 
 
 
@@ -142,11 +154,15 @@ Bron: https://codepen.io/asnoba/pen/bjokL?editors=1100 */
 
 
 
-.speedometer, p {
-  margin-left: 75px;
+.speedometer p {
+  margin: auto;
+  color: #808080;
+  margin-top: 120px;
 }
-.speedometer, h3 {
-  margin-left: 64px;
+.speedometer h3 {
+  margin: auto;
+  color: #808080;
+  margin-top: -40px;
 }
 .speedometer {
   display: flex;
@@ -159,7 +175,7 @@ Bron: https://codepen.io/asnoba/pen/bjokL?editors=1100 */
   z-index: 10;
 }
 .speedometer:after {
-  background-color: #fff;
+  background-color: #808080;
   width: 20px;
   height: 10px;
   left: 50%;
@@ -186,12 +202,12 @@ Bron: https://codepen.io/asnoba/pen/bjokL?editors=1100 */
   left: 0;
   border-style: solid;
   border-width: 90px 0 0 3px;
-  border-color: #fff transparent transparent;
+  border-color: #808080 transparent transparent;
   width: 0;
   height: 0;
 }
 .speedometer.speed-1 {
-  background: #F54F29;
+  background: #453DDA;
 }
 .speedometer.speed-1 > .pointer {
   animation-name: speed-1;
@@ -230,7 +246,7 @@ Bron: https://css-tricks.com/making-charts-with-css/ */
   margin: auto;
   position: relative;
   margin-top: 20px;
-  color: #282828;
+  color: #808080;
   z-index: 5;
 }
 
@@ -251,7 +267,7 @@ ul {
   height: inherit;
   width: 2px;
   position: absolute;
-  background: rgba(238, 238, 238, 0.6);
+  background: rgba(76, 76, 76, 0.3);
 }
 .line.l--0 {
   left: 0;
@@ -316,7 +332,7 @@ ul {
 .chart__bar {
   height: 30px;
   margin-bottom: 10px;
-  background: linear-gradient(to left, #453DDA, #11032A, #7D31BE);
+  background: #453DDA;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   opacity: 0;
@@ -351,7 +367,7 @@ ul {
 }
 
 .chart__bar:hover {
-  background: black;
+  background: rgba(69, 61, 218, 0.3);
 }
 
 @keyframes anim-lightspeed-in {
@@ -388,13 +404,28 @@ header {
 }
 #Food {
   grid-area: food;
-  margin: 10px;
 }
+
+@media only screen and (max-width: 599px){
+  body {
+    display: grid;
+    align-items: center;
+    grid-row-gap: 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "engine"
+      "speed"
+      "food";
+  }
+}  
+
 
 @media only screen and (min-width: 600px) and (max-width: 1000px){
   body {
     display: grid;
     align-items: center;
+    grid-row-gap: 60px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "header header"
@@ -408,11 +439,12 @@ header {
   body {
     display: grid;
     align-items: center;
+    grid-row-gap: 60px;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "header header"
       "engine food"
-      "speed .";
+      "speed food";
   } 
 } 
 
